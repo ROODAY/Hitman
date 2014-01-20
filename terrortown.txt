@@ -1,7 +1,7 @@
 "terrortown"
 {
 	"base"		"base"
-	"title"		"Trouble in Terrorist Town"
+	"title"		"Jihadist in Hitmanville"
 	"maps"		"^ttt_"
 	"menusystem"	"1"
 	"workshopid"	""
