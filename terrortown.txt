@@ -1,0 +1,13 @@
+"terrortown"
+{
+	"base"		"base"
+	"title"		"Trouble in Terrorist Town"
+	"maps"		"^ttt_"
+	"menusystem"	"1"
+	"workshopid"	""
+
+	"settings"
+	{
+		// TODO: put some settings here
+	}
+}
