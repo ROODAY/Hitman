@@ -1,6 +1,7 @@
 TGN Hitman
 ==========
 ***A version of the Hitman GMod Gamemode, edited by TGN Gaming***   
+***Originally created by Mezzokoko***
 
 **How to play:**   
 The traitors are now called Hitmen. Hitmen have a name on the bottom of their screen, who is their target.   
