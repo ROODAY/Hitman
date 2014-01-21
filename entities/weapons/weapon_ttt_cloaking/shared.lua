@@ -86,6 +86,13 @@ function SWEP:OnDrop()
    self:Remove()
 end
 
+hook.Add("PlayerDeath", "RemoveCloakOnDeath", function(victim, inflictor, killer)
+    if victim == self.Owner then
+	    self:UnCloak()
+        self:Remove()
+	end
+end
+)
 
 hook.Add("TTTPrepareRound", "UnCloakAll",function()
     for k, v in pairs(player.GetAll()) do

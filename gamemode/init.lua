@@ -1033,7 +1033,7 @@ end
 function GetPotentialTargets()
     target_pool = {}
     for _, ply in pairs(player.GetAll()) do
-        if not ply:IsTraitor() and ply:Alive() and not ply:IsSpec() then
+        if not ply:IsTraitor() && !ply:IsDetective() && ply:Alive() and not ply:IsSpec() then
             AddToPool(ply)
         end
     end
@@ -1085,7 +1085,7 @@ end
 --Clean pool, when a player dies or leaves
 local function CheckDeadPlayer(victim, weapon, killer)
     --Determining if a hitman needs to be punished
-    if killer:IsPlayer() then
+    if killer:IsPlayer() && !victim:IsDetective() then
 	    if killer:Nick() != victim:Nick() then
 	        if killer:IsTraitor() then
 	    	    if GetAssignedHitman(victim) != nil then

@@ -1,0 +1,17 @@
+Changes to Original Hitmancode:
+
+init.lua
+	Line 1036: if not ply:IsTraitor() && !ply:IsDetective() && ply:Alive() and not ply:IsSpec() then
+	Line 1088: if killer:IsPlayer() && !victim:IsDetective() then
+
+/entities/weapons/weapon_ttt_cloaking/shared.lua
+	Add:
+	
+	hook.Add("PlayerDeath", "RemoveCloakOnDeath", function(victim, inflictor, killer)
+		if victim == self.Owner then
+			self:UnCloak()
+			self:Remove()
+		end
+	end
+	)
+
